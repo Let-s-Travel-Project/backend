@@ -11,4 +11,8 @@ public class TestController {
         return "테스트 성공";
     }
 
+    public String test1() {
+        return "test1";
+    }
+
 }
