@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 public class LoggingAspect {
 
     @Pointcut("execution(* com.letsTravel.LetsTravel.controller..*.*(..))")
-    private void cut(){}
+    private void cut() {}
 
     @Around("cut()")
     public Object aroundLog(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
@@ -25,16 +25,26 @@ public class LoggingAspect {
         log.info("======= method name = {} =======", method.getName());
 
         Object[] args = proceedingJoinPoint.getArgs();
-        if (args.length == 0) log.info("no parameter");
+        if (args.length == 0) {
+            log.info("no parameter");
+        }
         for (Object arg : args) {
-            log.info("parameter type = {}", arg.getClass().getSimpleName());
-            log.info("parameter value = {}", arg.toString());
+            if (arg == null) {
+                log.info("parameter value = null");
+            } else {
+                log.info("parameter type = {}", arg.getClass().getSimpleName());
+                log.info("parameter value = {}", arg.toString());
+            }
         }
 
         Object returnObj = proceedingJoinPoint.proceed();
 
-        log.info("return type = {}", returnObj.getClass().getSimpleName());
-        log.info("return value = {}", returnObj);
+        if (returnObj == null) {
+            log.info("return value = null");
+        } else {
+            log.info("return type = {}", returnObj.getClass().getSimpleName());
+            log.info("return value = {}", returnObj);
+        }
 
         return returnObj;
     }
@@ -44,5 +54,4 @@ public class LoggingAspect {
         MethodSignature signature = (MethodSignature) proceedingJoinPoint.getSignature();
         return signature.getMethod();
     }
-
 }
