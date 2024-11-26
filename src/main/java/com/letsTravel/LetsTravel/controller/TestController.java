@@ -32,7 +32,7 @@ public class TestController {
 
     @GetMapping("geocode")
     public ResponseEntity<SimpleMessageDto> getGeocodeAnAddress(
-        @RequestParam String q,
+        @RequestParam("q") String q,
         @RequestBody TokenRequestDto tokenRequestDto
     ) {
         SimpleMessageDto result = testService.getGeocodeAnAddress(q, tokenRequestDto.token);
