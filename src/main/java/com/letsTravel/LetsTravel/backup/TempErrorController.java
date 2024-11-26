@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.controller;
+package com.letsTravel.LetsTravel.backup;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
