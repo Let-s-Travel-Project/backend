@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.letsTravel.LetsTravel.domain.place.Location;
-import com.letsTravel.LetsTravel.domain.place.Place;
-import com.letsTravel.LetsTravel.util.tsp.Christofides;
+import com.letsTravel.LetsTravel.backup.domain.place.Location;
+import com.letsTravel.LetsTravel.backup.domain.place.Place;
+import com.letsTravel.LetsTravel.backup.util.tsp.Christofides;
 
 public class ChristofidesTest {
 

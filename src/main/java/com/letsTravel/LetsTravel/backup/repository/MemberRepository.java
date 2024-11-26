@@ -1,9 +1,8 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.util.List;
-import java.util.Optional;
 
-import com.letsTravel.LetsTravel.domain.member.MemberBasicInfoReadDTO;
+import com.letsTravel.LetsTravel.backup.domain.member.MemberBasicInfoReadDTO;
 
 public interface MemberRepository {
 	List<MemberBasicInfoReadDTO> findPlanShareMemberByPlanSeq(int planSeq);

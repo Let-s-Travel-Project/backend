@@ -1,7 +1,6 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.sql.DataSource;
 
@@ -9,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.letsTravel.LetsTravel.domain.member.MemberBasicInfoReadDTO;
+import com.letsTravel.LetsTravel.backup.domain.member.MemberBasicInfoReadDTO;
 
 @Repository
 public class JdbcTemplateMemberRepository implements MemberRepository {

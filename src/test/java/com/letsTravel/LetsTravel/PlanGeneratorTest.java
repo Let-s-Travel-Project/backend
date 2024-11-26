@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.letsTravel.LetsTravel.domain.plan.PlanDetailDTO;
-import com.letsTravel.LetsTravel.service.PlanService;
+import com.letsTravel.LetsTravel.backup.domain.plan.PlanDetailDTO;
+import com.letsTravel.LetsTravel.backup.service.PlanService;
 
 @SpringBootTest
 public class PlanGeneratorTest {

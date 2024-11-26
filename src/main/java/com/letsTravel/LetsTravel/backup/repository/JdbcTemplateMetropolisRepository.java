@@ -1,26 +1,19 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
 
-import com.letsTravel.LetsTravel.domain.city.PlaceCityCreateDTO;
-import com.letsTravel.LetsTravel.domain.metropolis.MetropolisCreateDTO;
-import com.letsTravel.LetsTravel.domain.metropolis.MetropolisReadDTO;
+import com.letsTravel.LetsTravel.backup.domain.metropolis.MetropolisCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.metropolis.MetropolisReadDTO;
 
 @Repository
 public class JdbcTemplateMetropolisRepository implements MetropolisRepository {

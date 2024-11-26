@@ -1,7 +1,6 @@
 package com.letsTravel.LetsTravel.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.letsTravel.LetsTravel.domain.test.TokenRequestDto;
 import com.letsTravel.LetsTravel.domain.test.TokenResponse;
 import com.letsTravel.LetsTravel.security.model.SimpleMessageDto;
 import lombok.RequiredArgsConstructor;

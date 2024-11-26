@@ -1,9 +1,9 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
-import com.letsTravel.LetsTravel.domain.city.CityCreateDTO;
-import com.letsTravel.LetsTravel.domain.city.MetropolisCityCreateDTO;
-import com.letsTravel.LetsTravel.domain.city.PlaceCityCreateDTO;
-import com.letsTravel.LetsTravel.domain.metropolis.MetropolisCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.city.CityCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.city.MetropolisCityCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.city.PlaceCityCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.metropolis.MetropolisCreateDTO;
 
 public interface CityRepository {
 	

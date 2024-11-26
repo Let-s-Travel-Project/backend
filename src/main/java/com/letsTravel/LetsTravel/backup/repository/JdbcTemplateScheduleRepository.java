@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.letsTravel.LetsTravel.domain.place.Place;
-import com.letsTravel.LetsTravel.domain.schedule.ScheduleCreateDTO;
-import com.letsTravel.LetsTravel.domain.schedule.ScheduleInfoDTO;
-import com.letsTravel.LetsTravel.domain.schedule.ScheduleUpdateDTO;
+import com.letsTravel.LetsTravel.backup.domain.place.Place;
+import com.letsTravel.LetsTravel.backup.domain.schedule.ScheduleCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.schedule.ScheduleInfoDTO;
+import com.letsTravel.LetsTravel.backup.domain.schedule.ScheduleUpdateDTO;
 
 @Repository
 public class JdbcTemplateScheduleRepository implements ScheduleRepository {

@@ -1,8 +1,8 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.util.List;
 
-import com.letsTravel.LetsTravel.domain.plan.PlanInfoDTO;
+import com.letsTravel.LetsTravel.backup.domain.plan.PlanInfoDTO;
 
 public interface PlanRepository {
 

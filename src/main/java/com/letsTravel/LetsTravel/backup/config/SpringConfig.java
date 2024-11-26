@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.config;
+package com.letsTravel.LetsTravel.backup.config;
 
 import javax.sql.DataSource;
 

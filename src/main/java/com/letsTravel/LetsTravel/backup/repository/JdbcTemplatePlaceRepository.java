@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.sql.Date;
 import java.sql.ResultSet;
@@ -22,11 +22,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
-import com.letsTravel.LetsTravel.domain.place.AddressComponent;
-import com.letsTravel.LetsTravel.domain.place.DisplayName;
-import com.letsTravel.LetsTravel.domain.place.Location;
-import com.letsTravel.LetsTravel.domain.place.Place;
-import com.letsTravel.LetsTravel.domain.place.PlaceProcReturnDTO;
+import com.letsTravel.LetsTravel.backup.domain.place.AddressComponent;
+import com.letsTravel.LetsTravel.backup.domain.place.DisplayName;
+import com.letsTravel.LetsTravel.backup.domain.place.Location;
+import com.letsTravel.LetsTravel.backup.domain.place.Place;
+import com.letsTravel.LetsTravel.backup.domain.place.PlaceProcReturnDTO;
 
 @Repository
 public class JdbcTemplatePlaceRepository implements PlaceRepository {

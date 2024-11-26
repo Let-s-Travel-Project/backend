@@ -1,8 +1,8 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
-import com.letsTravel.LetsTravel.domain.type.PlaceTypeCreateDTO;
-import com.letsTravel.LetsTravel.domain.type.PrimaryTypeDetailDTO;
-import com.letsTravel.LetsTravel.domain.type.PrimaryTypeUpdateDTO;
+import com.letsTravel.LetsTravel.backup.domain.type.PlaceTypeCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.type.PrimaryTypeDetailDTO;
+import com.letsTravel.LetsTravel.backup.domain.type.PrimaryTypeUpdateDTO;
 
 public interface TypeRepository {
 

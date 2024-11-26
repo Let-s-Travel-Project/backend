@@ -1,10 +1,9 @@
-package com.letsTravel.LetsTravel.repository;
+package com.letsTravel.LetsTravel.backup.repository;
 
 import java.util.List;
 
-import com.letsTravel.LetsTravel.domain.city.PlaceCityCreateDTO;
-import com.letsTravel.LetsTravel.domain.metropolis.MetropolisCreateDTO;
-import com.letsTravel.LetsTravel.domain.metropolis.MetropolisReadDTO;
+import com.letsTravel.LetsTravel.backup.domain.metropolis.MetropolisCreateDTO;
+import com.letsTravel.LetsTravel.backup.domain.metropolis.MetropolisReadDTO;
 
 public interface MetropolisRepository {
 
