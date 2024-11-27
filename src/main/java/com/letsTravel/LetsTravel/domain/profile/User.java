@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.security.model;
+package com.letsTravel.LetsTravel.domain.profile;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

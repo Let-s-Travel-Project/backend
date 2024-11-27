@@ -1,5 +1,6 @@
 package com.letsTravel.LetsTravel.security.model;
 
+import com.letsTravel.LetsTravel.domain.profile.UserRole;
 import lombok.Data;
 
 @Data

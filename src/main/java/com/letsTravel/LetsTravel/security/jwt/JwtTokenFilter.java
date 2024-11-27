@@ -1,6 +1,6 @@
 package com.letsTravel.LetsTravel.security.jwt;
 
-import com.letsTravel.LetsTravel.security.model.User;
+import com.letsTravel.LetsTravel.domain.profile.User;
 import com.letsTravel.LetsTravel.security.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
