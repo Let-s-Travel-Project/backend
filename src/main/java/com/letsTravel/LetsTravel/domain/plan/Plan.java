@@ -1,11 +1,12 @@
-package com.letsTravel.LetsTravel.domain.scheme;
+package com.letsTravel.LetsTravel.domain.plan;
 
 import com.letsTravel.LetsTravel.domain.map.Country;
-import com.letsTravel.LetsTravel.domain.profile.User;
+import com.letsTravel.LetsTravel.domain.profile.Profile;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Builder
 @Entity
@@ -15,24 +16,25 @@ import java.time.LocalDate;
 public class Plan {
 
     @Id
+    @Column(columnDefinition = "INT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private Profile profile;
 
     @ManyToOne
     @JoinColumn(name = "country_code", nullable = false)
     private Country country;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(15)", nullable = false, unique = true)
     private String planName;
 
-    @Column(nullable = false)
-    private LocalDate startDate;
+    @Column(columnDefinition = "DATE", nullable = false)
+    private Date startDate;
 
-    @Column(nullable = false)
-    private Integer durationDays;
+    @Column(columnDefinition = "TINYINT", nullable = false)
+    private byte durationDays;
 
 }

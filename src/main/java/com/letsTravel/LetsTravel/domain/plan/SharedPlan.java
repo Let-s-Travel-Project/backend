@@ -1,6 +1,6 @@
-package com.letsTravel.LetsTravel.domain.scheme;
+package com.letsTravel.LetsTravel.domain.plan;
 
-import com.letsTravel.LetsTravel.domain.profile.User;
+import com.letsTravel.LetsTravel.domain.profile.Profile;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,8 +12,9 @@ import lombok.*;
 public class SharedPlan {
 
     @Id
+    @Column(columnDefinition = "INT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "plan_id", nullable = false)
@@ -21,6 +22,6 @@ public class SharedPlan {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private Profile profile;
 
 }

@@ -1,8 +1,10 @@
-package com.letsTravel.LetsTravel.domain.scheme;
+package com.letsTravel.LetsTravel.domain.plan;
 
 import com.letsTravel.LetsTravel.domain.map.Place;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalTime;
 
 @Builder
 @Entity
@@ -12,8 +14,9 @@ import lombok.*;
 public class Schedule {
 
     @Id
+    @Column(columnDefinition = "INT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "plan_id", nullable = false)
@@ -23,10 +26,10 @@ public class Schedule {
     @JoinColumn(name = "place_id", nullable = false)
     private Place place;
 
-    @Column(nullable = false)
-    private int dayNumber;
+    @Column(columnDefinition = "TINYINT", nullable = false)
+    private byte dayNumber;
 
-    @Column(nullable = false)
-    private String time;
+    @Column(columnDefinition = "TIME", nullable = false)
+    private LocalTime time;
 
 }
