@@ -27,6 +27,9 @@ public class Schedule {
     private Place place;
 
     @Column(columnDefinition = "TINYINT", nullable = false)
+    private byte visitNumber;
+
+    @Column(columnDefinition = "TINYINT", nullable = false)
     private byte dayNumber;
 
     @Column(columnDefinition = "TIME")
