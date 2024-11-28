@@ -31,7 +31,7 @@ public class Profile {
     private String lastName;
     @Column(columnDefinition = "VARCHAR(15)", nullable = false, unique = true)
     private String nickname;
-    @Column(columnDefinition = "Date")
+    @Column(columnDefinition = "Date", nullable = false)
     private Date birth;
     @Column(columnDefinition = "TINYINT")
     private Boolean sex;
