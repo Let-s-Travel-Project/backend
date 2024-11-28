@@ -51,6 +51,7 @@ public class ProfileService {
                     .username(signupDto.getUsername())
                     .password(passwordEncoder.encode(signupDto.getPassword()))
                     .role(UserRole.ROLE_USER.name())
+                    .nickname(signupDto.getNickname())
                     .firstName(signupDto.getFirstName())
                     .lastName(signupDto.getLastName())
                     .birth(signupDto.getBirth())
