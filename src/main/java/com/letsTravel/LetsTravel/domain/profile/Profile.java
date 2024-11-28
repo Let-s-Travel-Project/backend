@@ -38,7 +38,7 @@ public class Profile {
     @Column(nullable = false)
     @CreationTimestamp
     private LocalDateTime regTime;
-    @Column(nullable = false)
+    @Column(name = "loginTime")
     private LocalDateTime loginTime;
     @Column(columnDefinition = "BOOLEAN", nullable = false)
     private boolean status;
