@@ -1,7 +1,7 @@
 package com.letsTravel.LetsTravel.security.jwt;
 
-import com.letsTravel.LetsTravel.security.model.User;
-import com.letsTravel.LetsTravel.security.service.UserService;
+import com.letsTravel.LetsTravel.domain.profile.Profile;
+import com.letsTravel.LetsTravel.security.service.ProfileService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class JwtTokenFilter extends OncePerRequestFilter {
 
-    private final UserService userService;
+    private final ProfileService profileService;
     private final String secretKey;
 
     @Override
@@ -50,10 +50,10 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         System.out.println("유효함");
         String username = JwtTokenUtil.getUsername(token, secretKey);
         System.out.println("username: " + username);
-        User user = userService.getUserByUsername(username);
-        System.out.println("user: " + user);
+        Profile profile = profileService.getUserByUsername(username);
+        System.out.println("user: " + profile);
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                user.getUsername(), null, List.of(new SimpleGrantedAuthority(user.getRole()))
+                profile.getUsername(), null, List.of(new SimpleGrantedAuthority(profile.getRole()))
         );
         System.out.println("authenticationToken: " + authenticationToken);
         authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
