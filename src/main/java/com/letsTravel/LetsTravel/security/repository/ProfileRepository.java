@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
 
-    @Query("select u from Profile u where u.username = :username")
+    @Query("select p from Profile p where p.username = :username")
     Profile findByUsername(@Param("username") String username);
 
 }
