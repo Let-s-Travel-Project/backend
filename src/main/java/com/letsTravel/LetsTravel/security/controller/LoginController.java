@@ -22,7 +22,6 @@ public class LoginController {
     public ResponseEntity<SimpleMessageDto> login(
             @RequestBody LoginDto loginDto
     ) {
-
         SimpleMessageDto result = profileService.login(loginDto);
 
         return ResponseEntity.ok(result);
