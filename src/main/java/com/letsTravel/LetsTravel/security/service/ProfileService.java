@@ -31,6 +31,7 @@ public class ProfileService {
             }
             String token = JwtTokenUtil.createToken(profile.getUsername(), secret_key, 60*60*1000L);
             profile.updateLoginTime();
+            profileRepository.save(profile);
             return SimpleMessageDto.builder().message(token).build();
         }
     }
