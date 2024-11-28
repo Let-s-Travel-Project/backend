@@ -13,7 +13,7 @@ public class SignupDto {
     private String lastName;
     private String nickname;
     private Date birth = null;
-    private Byte sex = null;
+    private Boolean sex = null;
     private boolean status = true;
 
 }

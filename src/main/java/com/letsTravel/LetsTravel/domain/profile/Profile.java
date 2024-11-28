@@ -34,7 +34,7 @@ public class Profile {
     @Column(columnDefinition = "Date")
     private Date birth;
     @Column(columnDefinition = "TINYINT")
-    private Byte sex;
+    private Boolean sex;
     @Column(nullable = false)
     @CreationTimestamp
     private LocalDateTime regTime;
