@@ -13,6 +13,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Table(
+        name = "plan",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        columnNames = {"user_id", "planName"}
+                )
+        }
+)
 public class Plan {
 
     @Id
@@ -28,7 +36,7 @@ public class Plan {
     @JoinColumn(name = "country_code", nullable = false)
     private Country country;
 
-    @Column(columnDefinition = "VARCHAR(15)", nullable = false, unique = true)
+    @Column(columnDefinition = "VARCHAR(15)", nullable = false)
     private String planName;
 
     @Column(columnDefinition = "DATE", nullable = false)

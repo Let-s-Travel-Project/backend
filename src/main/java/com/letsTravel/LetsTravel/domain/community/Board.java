@@ -11,6 +11,7 @@ import lombok.*;
 public class Board {
 
     @Id
+    @Column(columnDefinition = "TINYINT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

@@ -18,7 +18,7 @@ public class Place {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "locality_id", nullable = false)
+    @JoinColumn(columnDefinition = "MEDIUMINT", name = "locality_id", nullable = false)
     private Locality locality;
 
     @ManyToOne
@@ -28,13 +28,13 @@ public class Place {
     @Column(columnDefinition = "VARCHAR(255)", nullable = false, unique = true)
     private String uniqueIdentifier;
 
-    @Column(columnDefinition = "VARCHAR(50)", nullable = false, unique = true)
+    @Column(columnDefinition = "VARCHAR(50)", nullable = false)
     private String placeName;
 
-    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false, unique = true)
-    private float latitude;
+    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false)
+    private double latitude;
 
-    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false, unique = true)
-    private float longitude;
+    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false)
+    private double longitude;
 
 }

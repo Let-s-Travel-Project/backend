@@ -15,7 +15,7 @@ public class CityTranslated {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private short id;
 
-    @Column(columnDefinition = "VARCHAR(85)", nullable = false, unique = true)
+    @Column(columnDefinition = "VARCHAR(85)", nullable = false)
     private String cityName;
 
     @Column(columnDefinition = "VARCHAR(2)", nullable = false)
