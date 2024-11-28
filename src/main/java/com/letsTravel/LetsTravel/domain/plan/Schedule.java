@@ -29,7 +29,7 @@ public class Schedule {
     @Column(columnDefinition = "TINYINT", nullable = false)
     private byte dayNumber;
 
-    @Column(columnDefinition = "TIME", nullable = false)
+    @Column(columnDefinition = "TIME")
     private LocalTime time;
 
 }
