@@ -31,19 +31,22 @@ public class Profile {
     private String lastName;
     @Column(columnDefinition = "VARCHAR(15)", nullable = false, unique = true)
     private String nickname;
-    @Column(columnDefinition = "Date", nullable = false)
+    @Column(columnDefinition = "Date")
     private Date birth;
-    @Column(columnDefinition = "TINYINT", nullable = false)
-    private byte sex;
+    @Column(columnDefinition = "TINYINT")
+    private Byte sex;
     @Column(nullable = false)
     @CreationTimestamp
     private LocalDateTime regTime;
     @Column(nullable = false)
-    @CreationTimestamp
     private LocalDateTime loginTime;
     @Column(columnDefinition = "BOOLEAN", nullable = false)
     private boolean status;
     @Column(columnDefinition = "VARCHAR(11)", nullable = false)
     private String role;
+
+    public void updateLoginTime() {
+        this.loginTime = LocalDateTime.now();
+    }
 
 }
