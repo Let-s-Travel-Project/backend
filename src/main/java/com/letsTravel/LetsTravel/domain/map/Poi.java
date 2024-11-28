@@ -11,17 +11,14 @@ import lombok.*;
 public class Poi {
 
     @Id
+    @Column(columnDefinition = "TINYINT UNSIGNED")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private short id;
 
-    @ManyToOne
-    @JoinColumn(name = "place_id", nullable = false)
-    private Place place;
-
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(16)", nullable = false, unique = true)
     private String poiName;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(20)", nullable = false, unique = true)
     private String poiNameTranslated;
 
 }

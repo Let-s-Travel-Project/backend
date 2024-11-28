@@ -1,6 +1,6 @@
 package com.letsTravel.LetsTravel.domain.community;
 
-import com.letsTravel.LetsTravel.domain.profile.User;
+import com.letsTravel.LetsTravel.domain.profile.Profile;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,16 +11,7 @@ import lombok.*;
 @Getter
 public class PostLike {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "post_id", nullable = false)
-    private Post post;
+    @EmbeddedId
+    private LikeId likeId;
 
 }

@@ -11,10 +11,11 @@ import lombok.*;
 public class City {
 
     @Id
+    @Column(columnDefinition = "SMALLINT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private short id;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(85)", nullable = false)
     private String cityName;
 
     @ManyToOne

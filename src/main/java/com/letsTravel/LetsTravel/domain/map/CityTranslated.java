@@ -11,13 +11,14 @@ import lombok.*;
 public class CityTranslated {
 
     @Id
+    @Column(columnDefinition = "SMALLINT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private short id;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(85)", nullable = false, unique = true)
     private String cityName;
 
-    @Column(length = 10, nullable = false)
+    @Column(columnDefinition = "VARCHAR(2)", nullable = false)
     private String languageCode;
 
     @ManyToOne

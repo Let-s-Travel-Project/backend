@@ -11,10 +11,11 @@ import lombok.*;
 public class Locality {
 
     @Id
+    @Column(columnDefinition = "MEDIUMINT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(58)", nullable = false)
     private String localityName;
 
     @ManyToOne

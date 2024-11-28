@@ -3,6 +3,8 @@ package com.letsTravel.LetsTravel.domain.map;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Builder
 @Entity
 @NoArgsConstructor
@@ -11,23 +13,28 @@ import lombok.*;
 public class Place {
 
     @Id
+    @Column(columnDefinition = "INT")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "locality_id", nullable = false)
     private Locality locality;
 
-    @Column(length = 100, nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "poi_id", nullable = false)
+    private Poi poi;
+
+    @Column(columnDefinition = "VARCHAR(255)", nullable = false, unique = true)
     private String uniqueIdentifier;
 
-    @Column(length = 255, nullable = false)
+    @Column(columnDefinition = "VARCHAR(50)", nullable = false, unique = true)
     private String placeName;
 
-    @Column(nullable = false)
-    private Double latitude;
+    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false, unique = true)
+    private float latitude;
 
-    @Column(nullable = false)
-    private Double longitude;
+    @Column(columnDefinition = "DECIMAL(8, 6)", nullable = false, unique = true)
+    private float longitude;
 
 }

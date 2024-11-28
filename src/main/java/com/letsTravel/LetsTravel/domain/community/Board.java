@@ -14,10 +14,10 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 100, nullable = false)
+    @Column(columnDefinition = "VARCHAR(30)", nullable = false)
     private String boardName;
 
-    @Column(length = 50, nullable = false)
+    @Column(columnDefinition = "VARCHAR(20)", nullable = false)
     private String category;
 
 }
