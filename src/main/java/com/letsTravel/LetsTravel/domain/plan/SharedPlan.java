@@ -11,17 +11,8 @@ import lombok.*;
 @Getter
 public class SharedPlan {
 
-    @Id
+    @EmbeddedId
     @Column(columnDefinition = "INT")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @ManyToOne
-    @JoinColumn(name = "plan_id", nullable = false)
-    private Plan plan;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private Profile profile;
+    private SharedPlanId id;
 
 }
