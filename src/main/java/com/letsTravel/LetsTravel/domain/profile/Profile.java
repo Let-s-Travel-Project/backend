@@ -34,16 +34,19 @@ public class Profile {
     @Column(columnDefinition = "Date", nullable = false)
     private Date birth;
     @Column(columnDefinition = "TINYINT", nullable = false)
-    private byte sex;
+    private Boolean sex;
     @Column(nullable = false)
     @CreationTimestamp
     private LocalDateTime regTime;
-    @Column(nullable = false)
-    @CreationTimestamp
+    @Column(name = "loginTime")
     private LocalDateTime loginTime;
     @Column(columnDefinition = "BOOLEAN", nullable = false)
     private boolean status;
     @Column(columnDefinition = "VARCHAR(11)", nullable = false)
     private String role;
+
+    public void updateLoginTime() {
+        this.loginTime = LocalDateTime.now();
+    }
 
 }

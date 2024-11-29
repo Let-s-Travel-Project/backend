@@ -30,7 +30,8 @@ public class ProfileService {
                 return SimpleMessageDto.builder().message("존재하지 않는 사용자이거나 비밀번호가 잘못되었습니다.").build();
             }
             String token = JwtTokenUtil.createToken(profile.getUsername(), secret_key, 60*60*1000L);
-
+            profile.updateLoginTime();
+            profileRepository.save(profile);
             return SimpleMessageDto.builder().message(token).build();
         }
     }
@@ -44,22 +45,27 @@ public class ProfileService {
         } else {
             if (signupDto.getPassword().length() > 15) {
                 return SimpleMessageDto.builder().message("비밀번호가 너무 깁니다.").build();
-            } else if (signupDto.getUsername().length() > 10) {
+            } else if (signupDto.getUsername().length() > 60) {
                 return SimpleMessageDto.builder().message("아이디가 너무 깁니다.").build();
             }
             profileRepository.save(Profile.builder()
                     .username(signupDto.getUsername())
                     .password(passwordEncoder.encode(signupDto.getPassword()))
-                    .role(UserRole.ROLE_USER.name()).build()
+                    .role(UserRole.ROLE_USER.name())
+                    .nickname(signupDto.getNickname())
+                    .firstName(signupDto.getFirstName())
+                    .lastName(signupDto.getLastName())
+                    .birth(signupDto.getBirth())
+                    .sex(signupDto.getSex())
+                    .status(signupDto.isStatus())
+                    .build()
             );
             return SimpleMessageDto.builder().message("로그인 성공").build();
         }
     }
 
     public Profile getUserByUsername(String username) {
-        Profile profile = profileRepository.findByUsername(username);
-
-        return profile;
+        return profileRepository.findByUsername(username);
     }
 
 
