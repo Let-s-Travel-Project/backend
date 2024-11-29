@@ -15,13 +15,14 @@ import java.lang.reflect.Method;
 @Log4j2
 public class LoggingAspect {
 
-    @Pointcut("execution(* com.letsTravel.LetsTravel.controller..*.*(..))")
+    @Pointcut("execution(* com.letsTravel.LetsTravel..*.*(..))")
     private void cut() {}
 
     @Around("cut()")
     public Object aroundLog(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 
         Method method = getMethod(proceedingJoinPoint);
+        log.info("여기서부터 로그임@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         log.info("======= method name = {} =======", method.getName());
 
         Object[] args = proceedingJoinPoint.getArgs();
@@ -45,7 +46,7 @@ public class LoggingAspect {
             log.info("return type = {}", returnObj.getClass().getSimpleName());
             log.info("return value = {}", returnObj);
         }
-
+        log.info("여기까지 로그임@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         return returnObj;
     }
 
