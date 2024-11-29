@@ -33,7 +33,7 @@ public class Profile {
     private String nickname;
     @Column(columnDefinition = "Date", nullable = false)
     private Date birth;
-    @Column(columnDefinition = "TINYINT")
+    @Column(columnDefinition = "TINYINT", nullable = false)
     private Boolean sex;
     @Column(nullable = false)
     @CreationTimestamp
