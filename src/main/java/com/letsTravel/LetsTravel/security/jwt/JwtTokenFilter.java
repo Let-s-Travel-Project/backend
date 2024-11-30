@@ -1,6 +1,6 @@
 package com.letsTravel.LetsTravel.security.jwt;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
 import com.letsTravel.LetsTravel.security.service.ProfileService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
