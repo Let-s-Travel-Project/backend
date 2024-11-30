@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.domain.profile;
+package com.letsTravel.LetsTravel.domain.profile.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

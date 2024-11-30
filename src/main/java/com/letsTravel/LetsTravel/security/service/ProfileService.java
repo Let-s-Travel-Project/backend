@@ -1,7 +1,7 @@
 package com.letsTravel.LetsTravel.security.service;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
-import com.letsTravel.LetsTravel.domain.profile.UserRole;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
+import com.letsTravel.LetsTravel.domain.profile.entity.UserRole;
 import com.letsTravel.LetsTravel.security.jwt.JwtTokenUtil;
 import com.letsTravel.LetsTravel.security.model.*;
 import com.letsTravel.LetsTravel.security.repository.ProfileRepository;

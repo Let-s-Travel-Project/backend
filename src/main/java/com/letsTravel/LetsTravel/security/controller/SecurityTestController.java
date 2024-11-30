@@ -1,7 +1,7 @@
 package com.letsTravel.LetsTravel.security.controller;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
-import com.letsTravel.LetsTravel.domain.profile.UserRole;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
+import com.letsTravel.LetsTravel.domain.profile.entity.UserRole;
 import com.letsTravel.LetsTravel.security.jwt.JwtTokenUtil;
 import com.letsTravel.LetsTravel.security.model.SimpleMessageDto;
 import com.letsTravel.LetsTravel.security.repository.ProfileRepository;
@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @RestController
@@ -35,7 +33,7 @@ public class SecurityTestController {
                 .password("test")
                 .nickname("test")
                 .birth(date)
-                .sex((byte) 1)
+                .sex(true)
                 .firstName("te").lastName("st")
                         .status(true)
                 .role(UserRole.ROLE_USER.name()).build()

@@ -1,11 +1,10 @@
-package com.letsTravel.LetsTravel.domain.plan;
+package com.letsTravel.LetsTravel.domain.plan.entity;
 
-import com.letsTravel.LetsTravel.domain.map.Country;
-import com.letsTravel.LetsTravel.domain.profile.Profile;
+import com.letsTravel.LetsTravel.domain.map.entity.Country;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @Builder

@@ -1,6 +1,5 @@
-package com.letsTravel.LetsTravel.domain.plan;
+package com.letsTravel.LetsTravel.domain.plan.entity;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
 import jakarta.persistence.*;
 import lombok.*;
 

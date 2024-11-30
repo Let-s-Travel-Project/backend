@@ -1,4 +1,4 @@
-package com.letsTravel.LetsTravel.domain.map;
+package com.letsTravel.LetsTravel.domain.map.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,10 +14,10 @@ public class Country {
     @Column(columnDefinition = "CHAR(2)", nullable = false)
     private String countryCode;
 
-    @Column(columnDefinition = "VARCHAR(17)", nullable = false, unique = true)
+    @Column(columnDefinition = "VARCHAR(40)", nullable = false, unique = true)
     private String countryName;
 
-    @Column(columnDefinition = "VARCHAR(60)", nullable = false, unique = true)
+    @Column(columnDefinition = "VARCHAR(30)", nullable = false, unique = true)
     private String countryNameTranslated;
 
 }

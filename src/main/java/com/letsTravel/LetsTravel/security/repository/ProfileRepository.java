@@ -1,6 +1,6 @@
 package com.letsTravel.LetsTravel.security.repository;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

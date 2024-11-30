@@ -1,7 +1,7 @@
 package com.letsTravel.LetsTravel.security.config;
 
 import com.letsTravel.LetsTravel.security.jwt.JwtTokenFilter;
-import com.letsTravel.LetsTravel.domain.profile.UserRole;
+import com.letsTravel.LetsTravel.domain.profile.entity.UserRole;
 import com.letsTravel.LetsTravel.security.service.ProfileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,8 +34,8 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(new JwtTokenFilter(profileService, secretKey), LogoutFilter.class)
                 .authorizeHttpRequests(auth ->
-//                        auth.requestMatchers("/**").permitAll()
-                        auth.requestMatchers("/login/signup", "/login", "test").permitAll()
+                        auth.requestMatchers("/**").permitAll()
+//                        auth.requestMatchers("/login/signup", "/login", "test").permitAll()
                 .requestMatchers("/login/admin/**").hasAuthority(UserRole.ROLE_ADMIN.name()).anyRequest().authenticated())
 
                 .build();

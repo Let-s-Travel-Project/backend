@@ -1,7 +1,7 @@
-package com.letsTravel.LetsTravel.domain.community;
+package com.letsTravel.LetsTravel.domain.community.entity;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
-import com.letsTravel.LetsTravel.domain.plan.Plan;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
+import com.letsTravel.LetsTravel.domain.plan.entity.Plan;
 import com.letsTravel.LetsTravel.domain.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.*;

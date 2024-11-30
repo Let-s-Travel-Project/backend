@@ -1,10 +1,8 @@
-package com.letsTravel.LetsTravel.domain.community;
+package com.letsTravel.LetsTravel.domain.community.entity;
 
 import com.letsTravel.LetsTravel.domain.util.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Builder
 @Entity

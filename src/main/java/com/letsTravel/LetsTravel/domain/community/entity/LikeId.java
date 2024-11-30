@@ -1,6 +1,6 @@
-package com.letsTravel.LetsTravel.domain.community;
+package com.letsTravel.LetsTravel.domain.community.entity;
 
-import com.letsTravel.LetsTravel.domain.profile.Profile;
+import com.letsTravel.LetsTravel.domain.profile.entity.Profile;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
