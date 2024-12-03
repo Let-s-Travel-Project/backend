@@ -24,7 +24,7 @@ public class CountryController {
 	}
 
 	@GetMapping
-	public ResponseEntity<Country> getCountry(@RequestBody MapDto mapDto) {
+	public ResponseEntity<Country> getCountry(@ModelAttribute MapDto mapDto) {
 		return ResponseEntity.ok(countryService.getCountryByCountryName(mapDto.countryName));
 	}
 

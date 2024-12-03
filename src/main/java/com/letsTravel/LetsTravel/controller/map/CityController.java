@@ -18,14 +18,14 @@ public class CityController {
 
     @GetMapping("/list")
     public ResponseEntity<List<City>> getAllCities(
-            @RequestBody MapDto mapDto
+            @ModelAttribute MapDto mapDto
     ) {
         return ResponseEntity.ok(cityService.getAllCities(mapDto.countryName));
     }
 
     @GetMapping
     public ResponseEntity<City> getCity(
-            @RequestBody MapDto mapDto
+            @ModelAttribute MapDto mapDto
     ) {
         return ResponseEntity.ok(cityService.getCity(
                 mapDto.cityName,

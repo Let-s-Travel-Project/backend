@@ -27,7 +27,7 @@ public class AppleController {
     @GetMapping("geocode")
     public ResponseEntity<SimpleMessageDto> getGeocodeAnAddress(
         @RequestParam("q") String q,
-        @RequestBody TokenRequestDto tokenRequestDto
+        @ModelAttribute TokenRequestDto tokenRequestDto
     ) {
         SimpleMessageDto result = appleService.getGeocodeAnAddress(q, tokenRequestDto.token);
 
