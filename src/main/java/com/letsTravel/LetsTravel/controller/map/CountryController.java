@@ -20,7 +20,6 @@ public class CountryController {
 
 	@GetMapping("list")
 	public ResponseEntity<List<Country>> getAllCountries(@ModelAttribute("pageParamDto") PageParamDto pageParamDto) {
-		System.out.println(pageParamDto);
 		return ResponseEntity.ok(countryService.getAllCountries(pageParamDto));
 	}
 
