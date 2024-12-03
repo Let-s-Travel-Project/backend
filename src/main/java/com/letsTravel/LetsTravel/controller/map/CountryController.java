@@ -18,14 +18,13 @@ public class CountryController {
 
 	private final CountryService countryService;
 
-	@GetMapping("/")
+	@GetMapping("list")
 	public ResponseEntity<List<Country>> getAllCountries(@ModelAttribute("pageParamDto") PageParamDto pageParamDto) {
-		System.out.println(pageParamDto);
 		return ResponseEntity.ok(countryService.getAllCountries(pageParamDto));
 	}
 
 	@GetMapping
-	public ResponseEntity<Country> getCountry(@RequestBody MapDto mapDto) {
+	public ResponseEntity<Country> getCountry(@ModelAttribute MapDto mapDto) {
 		return ResponseEntity.ok(countryService.getCountryByCountryName(mapDto.countryName));
 	}
 

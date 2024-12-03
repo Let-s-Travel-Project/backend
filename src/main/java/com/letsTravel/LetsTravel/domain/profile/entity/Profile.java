@@ -44,6 +44,12 @@ public class Profile {
     private boolean status;
     @Column(columnDefinition = "VARCHAR(11)", nullable = false)
     private String role;
+    @Column(columnDefinition = "VARCHAR(255)")
+    private String appleToken;
+
+    public void updateAppleToken(String appleToken) {
+        this.appleToken = appleToken;
+    }
 
     public void updateLoginTime() {
         this.loginTime = LocalDateTime.now();

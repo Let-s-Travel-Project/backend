@@ -1,14 +1,10 @@
 package com.letsTravel.LetsTravel.service.map;
 
-import com.letsTravel.LetsTravel.client.TestClient;
 import com.letsTravel.LetsTravel.domain.map.dto.MapDto;
 import com.letsTravel.LetsTravel.domain.map.entity.*;
 import com.letsTravel.LetsTravel.repository.map.*;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.List;
 
 @Service

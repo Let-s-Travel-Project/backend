@@ -18,7 +18,7 @@ public class LocalityController {
 
     @GetMapping("/list")
     public ResponseEntity<List<Locality>> getAllLocalities(
-            @RequestBody MapDto mapDto
+            @ModelAttribute MapDto mapDto
     ) {
         return ResponseEntity.ok(localityService.getAllLocalities(
                 mapDto.cityName,
@@ -28,7 +28,7 @@ public class LocalityController {
 
     @GetMapping
     public ResponseEntity<Locality> getLocality(
-            @RequestBody MapDto mapDto
+            @ModelAttribute MapDto mapDto
     ) {
         return ResponseEntity.ok(localityService.getLocality(
                 mapDto.localityName,

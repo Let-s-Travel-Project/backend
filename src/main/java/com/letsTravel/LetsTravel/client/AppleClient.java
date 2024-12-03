@@ -18,7 +18,7 @@ import java.time.Duration;
 
 @RequiredArgsConstructor
 @Component
-public class TestClient {
+public class AppleClient {
 
     private final HttpClient appleMapClient;
     private final ObjectMapper objectMapper;
@@ -26,7 +26,7 @@ public class TestClient {
     private String token;
     private final String baseUrl = "https://maps-api.apple.com/v1";
 
-    public TokenResponse getAppleMapToken() {  // test
+    public TokenResponse getAppleMapToken() {
         try {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(baseUrl + "/token"))
