@@ -16,7 +16,7 @@ public class PlaceController {
 
     private final PlaceService placeService;
 
-    @GetMapping
+    @GetMapping("list")
     public ResponseEntity<List<Place>> getAllPlaces(
             @RequestBody MapDto mapDto
     ) {
