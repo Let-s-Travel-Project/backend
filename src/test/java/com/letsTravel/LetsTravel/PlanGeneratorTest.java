@@ -1,14 +1,6 @@
 package com.letsTravel.LetsTravel;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.letsTravel.LetsTravel.backup.domain.plan.PlanDetailDTO;
-import com.letsTravel.LetsTravel.backup.service.PlanService;
 
 @SpringBootTest
 public class PlanGeneratorTest {
